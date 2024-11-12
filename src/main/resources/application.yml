@@ -1,0 +1,37 @@
+server:
+  port: 8080
+
+spring:
+  server:
+    oauth2: ${oauth2}
+  application:
+    name: server-oauth2
+  data:
+    mongodb:
+      port: 27017
+      username: root
+      password: root
+      host: ${host}
+      database: intk_security
+      authentication-database: admin
+
+logging:
+  level:
+    org:
+      springframework:
+        security: trace
+
+user-admin:
+  email: ${userAdminEmail}
+  password: ${userAdminPassword}
+  lastName: ${userAdminLastName}
+  firstName: ${userAdminFirstName}
+  numberPhone: ${userAdminNumberPhone}
+  documentType: ${userAdminDocumentType}
+  documentNumber: ${userAdminDocumentNumber}
+
+client:
+  clientId: ${clientId}
+  redirectUrl: ${redirectUrl}
+  codeVerifier: ${codeVerifier}
+  clientSecret: ${clientSecret}
